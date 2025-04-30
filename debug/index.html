@@ -7,6 +7,8 @@
     <body>
         <script type="text/javascript">
             function toOneDimension(previousValue, currentValue){
+                console.log('previousValue:', previousValue);
+                console.log('currentValue:', currentValue);
                 return currentValue.concat(previousValue);
             }
             var sampleArrayA=[
@@ -14,11 +16,16 @@
                 ['B1', 'B2', 'B3'],
                 ['C1', 'C2', 'C3']
             ];
+            console.log('sampleArrayA:', sampleArrayA);
+            
             var sampleArrayB=sampleArrayA.reduce(toOneDimension);
+            console.log('sampleArrayB:', sampleArrayB);
+            
             for(var counterVar=0; counterVar<sampleArrayB.length; counterVar++){
                 document.write('sampleArrayB['+counterVar+']:');
                 document.write(sampleArrayB[counterVar]);
                 document.write('<br/>');
+                console.log('Current output:', 'sampleArrayB['+counterVar+']:' +sampleArrayB[counterVar]);
             }
         </script>
     
